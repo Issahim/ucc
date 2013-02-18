@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E97A5CD4-6359-4C0B-A0BC-2B0D08927EC6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UCC</RootNamespace>
+    <AssemblyName>UCC</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v12.2.Core, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="API.cs" />
+    <Compile Include="Classes\Action.cs" />
+    <Compile Include="Classes\ActionPlayer.cs" />
+    <Compile Include="Classes\Combos.cs" />
+    <Compile Include="Classes\Condition.cs" />
+    <Compile Include="Classes\Profil.cs" />
+    <Compile Include="Classes\Settings.cs" />
+    <Compile Include="Classes\Timeout.cs" />
+    <Compile Include="Classes\XmlSerializer.cs" />
+    <Compile Include="Core.cs" />
+    <Compile Include="Forms\CreateInstance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CreateInstance.Designer.cs">
+      <DependentUpon>CreateInstance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ressources\Enums.cs" />
+    <Compile Include="Forms\Algo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Algo.Designer.cs">
+      <DependentUpon>Algo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\InputBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InputBox.Designer.cs">
+      <DependentUpon>InputBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Main.designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Global.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\Algo.resx">
+      <DependentUpon>Algo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CreateInstance.resx">
+      <DependentUpon>CreateInstance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InputBox.resx">
+      <DependentUpon>InputBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\addMini.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\addMini2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\application-view-detail-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\battle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\Categories-preferences-other-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\cond.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\default.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\default2.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\empreintes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\Load-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\paste.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\Save-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\target-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\wizard-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\profile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\uccalgo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\todi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\valid.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
